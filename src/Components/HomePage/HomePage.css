@@ -1,0 +1,71 @@
+.homepage{
+    min-height: 100vh;
+    height: auto;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.home-search{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.home-search input {
+    width: 300px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    font-size: 25px;
+    border-radius: 10px;
+    margin: 20px 0;
+  
+}
+
+.home-search button {
+    font-size: 25px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    color: #fff;
+    background-color:  #df5cdf;
+    margin-left: 10px;
+    border-radius: 5px;
+    outline: none;
+
+}
+
+.home-meals-grid{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.home-meal {
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.home-meal img{
+    width: 250px;
+    border: 1px solid #ccc;
+    margin: 10px ;
+    transition:  all 0.4s ease;
+    border-radius: 10px;
+}
+
+.home-meal img:hover{
+    transform: scale(1.1);
+}

@@ -6,8 +6,8 @@ import Footer from './Components/Footer/Footer';
 import { Routes , Route} from 'react-router-dom';
 import HomePage from './Components/HomePage/HomePage';
 import Categories from './Components/Categories/Categories';
-import RandomMeal from './Components/RandomMeal/RandomMeal';
 import Error from './utils/Error';
+import SinglePage from './Components/SinglePage/SinglePage';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
   <Routes>
     <Route path="/" element={<HomePage />} />
     <Route path="/categories" element={<Categories />} />
-    <Route path="/random-meal" element={<RandomMeal />} />
+    <Route path="/meal/:id" element={<SinglePage />} />
     <Route path="*" element={<Error />} />
   </Routes>
   <Footer/> 
