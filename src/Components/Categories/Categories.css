@@ -9,7 +9,13 @@
     width: 100%;
     height: 80vh;
     cursor: pointer;
-}    
+  
+}  
+
+.categories h4{
+    text-decoration: none;
+    color: #fff;
+}
 
 .categories img {
     width: 300px;

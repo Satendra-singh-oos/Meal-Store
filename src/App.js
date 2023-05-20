@@ -8,6 +8,7 @@ import HomePage from './Components/HomePage/HomePage';
 import Categories from './Components/Categories/Categories';
 import Error from './utils/Error';
 import SinglePage from './Components/SinglePage/SinglePage';
+import SingleCategorie from './Components/SingleCategorie/SingleCategorie';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
     <Route path="/" element={<HomePage />} />
     <Route path="/categories" element={<Categories />} />
     <Route path="/meal/:id" element={<SinglePage />} />
+    {/* <Route path='/categories/categorie/:id' element={<SingleCategorie/>}/> */}
     <Route path="*" element={<Error />} />
   </Routes>
   <Footer/> 

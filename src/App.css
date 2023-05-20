@@ -2,3 +2,15 @@
  margin: 0;
  box-sizing: border-box;
 }
+
+.error{
+    font-size: 50px;
+    height: 80vh;
+    background-color: #25252B;
+    color: #fff;
+    text-align: center;
+    padding: 50px 10px;
+}
+.error span {
+    font-size: 100px;
+}

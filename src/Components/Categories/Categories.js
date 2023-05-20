@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useGlobalContext } from '../../ContextApi/context'
 import "./Categories.css"
+import { NavLink } from 'react-router-dom'
 const Categories = () => {
  
  const{fetchCategories,categories}= useGlobalContext()
@@ -12,10 +13,10 @@ const Categories = () => {
   return (
     <div className='categories'>
       {categories.map((categorie)=>(
-        <div key={categorie.idCategory}>
+        <NavLink key={categorie.idCategory} to={`categorie/${categories.strCategory}`}>
           <img src={categorie.strCategoryThumb} alt='categorie-img'/>
           <h4>{categorie.strCategory}</h4>
-        </div>
+        </NavLink>
       ))}
     </div>
   )

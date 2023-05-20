@@ -10,6 +10,7 @@ export const AppProvider = ({children}) =>{
   const [meals,setMeals]=useState([])
   const [categories,setCategories] = useState([])
   const [meal,setMeal]=useState(null)
+  const [categorie,setCategorie]=useState([])
   
   //fetching data from API 
   const fetchHomePageMeals  = useCallback((searchText)=>{
@@ -44,9 +45,18 @@ export const AppProvider = ({children}) =>{
     })
  })
 
+ //fetching single categories
+ const fetchMealByCategorie = useCallback((searchText)=>{
+  axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${searchText}`)
+  .then(res=>{
+    console.log(res.data.meals);
+    setCategorie(res.data.meals)
+  })
+ })
+
 
   return (
-        <mealContext.Provider value={{fetchHomePageMeals,meals ,fetchCategories,categories ,fetchMealById,meal}}>{children}</mealContext.Provider>
+        <mealContext.Provider value={{fetchHomePageMeals,meals ,fetchCategories,categories ,fetchMealById,meal ,fetchMealByCategorie,categorie}}>{children}</mealContext.Provider>
       )
 }
 

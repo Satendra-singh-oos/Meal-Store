@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useGlobalContext } from '../../ContextApi/context'
+import './SinglePage.css'
 
 
 const SinglePage = () => {
@@ -19,24 +20,42 @@ const SinglePage = () => {
     const {
         strMeal,
         strMealThumb,
-        strCategory,
         strArea,
         strInstructions,
+        strYoutube,
       } = meal[0];
   return (
-    <div className='singlemeal'>
+  
 
     <div className="singlemeal">
         
-      <h2>{strMeal}</h2>
       <img src={strMealThumb} alt={strMeal} />
-      <p>Category: {strCategory}</p>
-      <p>Area: {strArea}</p>
-      <p>Instructions: {strInstructions}</p>
+      
+      <div className='singlemeal-heading'>
+      <h2><span> 🥘  </span>{strMeal}</h2>
+      <h2><span> 🧑‍🍳 </span>Area: {strArea}</h2>
+         
+      </div>
+
+      <div className='singlemeal-sub'>
+
+      <h1>
+      <span> 🍴 How To Make </span>
+      <p>{strInstructions}</p>
+      </h1>
+
+      </div>
+
+      {/* <div className='singlemeal-vedio'>
+        <video width="750" height="500" controls >
+          <source src={strYoutube} type="video/mp4"/>
+        </video>
+      </div> */}
+
     </div>    
         
 
-    </div>
+  
   )
 }
 

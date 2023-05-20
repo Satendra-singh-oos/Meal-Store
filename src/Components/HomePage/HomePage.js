@@ -30,6 +30,8 @@ const HomePage = () => {
         <button onClick={fetchMealsHandler}>Search Meal</button>
       
       </div>
+
+      
  
       <div className='home-meals-grid'>
          {
